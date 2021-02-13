@@ -25,14 +25,18 @@ function Upload() {
         <>
         <form>
             <div className='display'>
+
                 { file && <ProgressBar file={file} setFile={setFile} /> }
                 { error && <div className='error'>{ error }</div> }
                 { file && <div>{ file.name } </div >}
+
             </div>
             <label>
-                <p>Easily convert to and from Text in seconds.</p>
-                <input type="file" onChange={changeHandler} />
-                <span>drap files here</span>
+
+                <p>Click for easily convert to Text in seconds.</p>
+                <input type="file" onChange={changeHandler}/>
+                <p>drap files here</p>
+
             </label>
        
         </form>

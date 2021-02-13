@@ -1,11 +1,8 @@
 :root{
-    --primary: #6caef0;
-    --secondary: #4e4e4e;
     --error: #ff4a4a;
   }
   
   body{
-    color: var(--secondary);
     background-color: white;
   }
   .Upload{
@@ -25,19 +22,20 @@
   }
   label{
     display: block;
-    width: 1200px;
+    width: 1000px;
     height: 500px;
     border: 2px solid black;
     border-radius: 1%;
     margin: 100px auto;
     line-height: 44px;
-    color: black;
+    /* color: black; */
     font-weight: bold;
-    font-size: 36px;
+    font-size: 20px;
+    padding: 8%;
   }
   label:hover{
     background: white;
-    border:dashed  ;
+    border: dashed;
   }
   .output{
     height: 60px;
@@ -53,9 +51,14 @@
   /* progress bar styles */
   .progress-bar{
     height: 5px;
-    background: var(--secondary);
+    background: black;
   }
   .display .progress-bar{
     margin-top: -30px;
   }
-  
+  @media screen and (max-width: 1400px) {
+    label{
+        width: 900px;
+        height: 400px;
+    }
+}
