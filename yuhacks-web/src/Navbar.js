@@ -24,12 +24,12 @@ function Navbar() {
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='UploadPage' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/upload' className='nav-links' onClick={closeMobileMenu}>
                                 UploadPage
                             </Link>
                         </li>
                         <li className='nav-item'>
-                            <Link to='ResultPage' className='nav-links' onClick={closeMobileMenu}>
+                            <Link to='/results' className='nav-links' onClick={closeMobileMenu}>
                                 ResultPage
                             </Link>
                         </li>
