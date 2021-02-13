@@ -6,11 +6,15 @@ import UploadPage from './pages/UploadPage'
 
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
+import Navbar from './Navbar';
+
+
 
 class App extends Component {
   render() {
     return (
         <BrowserRouter>
+          <Navbar />
           <Switch>
 
             <Route path="/" exact>
