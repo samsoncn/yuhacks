@@ -1,17 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
 
-function App() {
-  return (
-    <>
-    <Router>
-      <Navbar/>
-      <Switch>
-        <Route path='/' exact component={Home} />
-      </Switch>
-    </Router>
-    </>
-  );
+import Home from './pages/Home';
+import ResultPage from './pages/ResultPage';
+import UploadPage from './pages/UploadPage'
+
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+
+
+class App extends Component {
+  render() {
+    return (
+        <BrowserRouter>
+          <Switch>
+
+            <Route path="/" exact>
+              <Home />
+            </Route>
+
+            <Route path="/upload" exact>
+              <UploadPage />
+            </Route>
+
+            <Route path="/results" exact>
+              <ResultPage />
+            </Route>
+
+          </Switch>
+        </BrowserRouter>
+    );
+  }
 }
 
 export default App;
