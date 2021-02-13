@@ -1,11 +1,14 @@
 import React from 'react';
+import Upload from '../components/Upload';
+import '../components/Upload.css';
 
 class UploadPage extends React.Component {
     render() {
         return (
-            <div className="" style={{}}>
-                UPLOAD
-            </div>
+            <Upload />
+            // <div className="" style={{}}>
+            //     UPLOAD
+            // </div>
         );
     }
 }
