@@ -1,0 +1,19 @@
+.home {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.blurb {
+    max-width: 50vw;
+    max-height: 50vh;
+    padding: 15px;
+    border-style: outset;
+    align-self: center;
+    border-radius: 10px;
+}
