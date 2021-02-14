@@ -29,7 +29,7 @@ def find_stopword(doc):
     # def find_stopwords():
     # Find the most common stopwords
     contents = nlp(open(doc).read())
-    stop_words = [token.text for token in contents if token.is_stop == True ]
+    stop_words = [token.text.lower() for token in contents if token.is_stop == True ]
     word_freq = Counter(stop_words)
     common_stopwords =  [key for key, _ in word_freq.most_common(10)]
 
