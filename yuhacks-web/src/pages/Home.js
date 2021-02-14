@@ -12,7 +12,7 @@ class Home extends React.Component {
 
             >
                 <h1 className="title">
-                    YUHACKS 2021
+                    Expert Lecture
                 </h1>
                 <div className="blurb">
                     <div style={{fontWeight: '700'}}>
