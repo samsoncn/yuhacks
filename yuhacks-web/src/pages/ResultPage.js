@@ -8,17 +8,16 @@ function Child() {
 
 class ResultPage extends React.Component {
     componentDidMount() {
-        const url = this.props.match.params.link;
-        console.log(url); //state would be in data.state//
-/*         axios.post('/api/orders/late', {}, {
-            headers: {
-                'Authorization': `token ${localStorage.getItem('token')}`
-            }})
+        const url = this.props.location.state.link;
+        console.log(this.props.location.state);
+        console.log(url);
+        //state would be in data.state//
+        axios.post('/api/questions', {url})
             .then(
                 (res) => {
-
+                    console.log(res.data)
                 }
-            ) */
+            )
     }
 
     render() {
@@ -27,8 +26,10 @@ class ResultPage extends React.Component {
                 <h1 style={{textAlign: 'center', marginTop: '100px'}}>
                     RESULTS
                 </h1>
-                <div className="" style={{display: 'flex', justifyContent: 'center'}}>
-                    <QACard/>
+                <div className="" style={{display: 'flex', flexDirection: 'column', alignContent: 'center'}}>
+                    <QACard question={"What is python?"} answer={"An interpreted programming language"}/>
+                    <QACard question={"Why is python important?"} answer={"Because it's easy to use."}/>
+                    <QACard question={"What is the origin of the name python"} answer={"Monty Python"}/>
                 </div>
             </>
 

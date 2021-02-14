@@ -55,7 +55,7 @@ function Upload() {
        
         </form>
             {url &&
-                <Link to={`/results/${url}`} style={{ justifySelf: 'center', alignSelf: 'center'}}>
+                <Link to={{pathname: "/results", state: {link: url}}} style={{ justifySelf: 'center', alignSelf: 'center'}}>
                     <Button>
                         Analyze
                     </Button>
