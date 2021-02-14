@@ -51,17 +51,30 @@ def loop(x):
         NP1 = NP(T1, N1)
         NP2 = NP(T2, N2)
         VP1 = VP(Verb1, NP2)
-        print(sentence(NP1, VP1))
-        print(simple_q(WH1, ez1, N2))
-        print(general_q(WH1, ez1, N1, VP1))
+        s1 = open('sentence.txt', 'a')
+        q1 = open('question.txt', 'a')
+
+        contents = sentence(NP1, VP1) + "\n"
+        s1.write(contents)
+        contents += simple_q(WH1, ez1, N2) + "\n"
+        q1.write(contents)
+        contents += general_q(WH1, ez1, N1, VP1)
+        q1.write(contents)
+        s1.close()
+        q1.close()
 
 # N1 = find_stopword('testing.txt')
 # print(N1)
 # T1 = 'the'
 # NP(T1, N1)
-loop(2)
+loop(3)
+
 
 # T= ['the']
 # N= ['man']
 # a = assemble(T, N)
 # print(a)
+
+# demo1 = loop(2)
+# print(demo1)
+
