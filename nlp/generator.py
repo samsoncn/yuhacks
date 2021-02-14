@@ -1,7 +1,5 @@
 from findkey import find_noun, find_verb, find_stopword
 
-
-
 def assemble(*args):
     # str = ' '.join(args)
     str= ' '.join(''.join(elems) for elems in args)
@@ -10,6 +8,9 @@ def assemble(*args):
 # Noun Phrase
 def NP(T, N):
     return assemble(T, N)
+
+def N(N):
+    return assemble(N)
 
 # Verb Phrase
 def VP(Verb, NP):
@@ -21,6 +22,13 @@ def sentence(NP, VP):
 def stopword(T):
     return T
 
+def simple_q(WH, IS, N):
+    q = assemble(WH, IS, N) + "?"
+    return q
+
+def general_q(WH, ez_verbs, NP, VP):
+    return assemble(WH, ez_verbs, NP, VP) + "?"
+
 def loop(x):
     import random as ran
     # T = len(find_stopword('testing.txt'))
@@ -29,24 +37,29 @@ def loop(x):
     T = find_stopword('testing.txt')
     N = find_noun('testing.txt')
     Verb = find_verb('testing.txt')
-
+    WH = ['what', 'when', 'who', 'how', 'where']
+    ez_verbs = ['is', 'are', 'do', 'does', 'will be', 'to be', 'can be', 'could be']
     
 
     for i in range(x):
         N1, N2 = ran.choice(N), ran.choice(N)
         T1, T2 = ran.choice(T), ran.choice(T)
         Verb1 = ran.choice(Verb)
+        WH1 = ran.choice(WH)
+        ez1 = ran.choice(ez_verbs)
 
         NP1 = NP(T1, N1)
         NP2 = NP(T2, N2)
         VP1 = VP(Verb1, NP2)
         print(sentence(NP1, VP1))
+        print(simple_q(WH1, ez1, N2))
+        print(general_q(WH1, ez1, N1, VP1))
 
 # N1 = find_stopword('testing.txt')
 # print(N1)
 # T1 = 'the'
 # NP(T1, N1)
-loop(20)
+loop(2)
 
 # T= ['the']
 # N= ['man']
