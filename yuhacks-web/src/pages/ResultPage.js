@@ -1,11 +1,16 @@
 import React from 'react';
 import QACard from "../components/QACard";
-import MCCard from "../components/MCCard"
 import axios from "axios";
+import {useLocation} from "react-router-dom";
+
+function Child() {
+}
 
 class ResultPage extends React.Component {
     componentDidMount() {
-        axios.post('/api/orders/late', {}, {
+        const url = this.props.match.params.link;
+        console.log(url); //state would be in data.state//
+/*         axios.post('/api/orders/late', {}, {
             headers: {
                 'Authorization': `token ${localStorage.getItem('token')}`
             }})
@@ -13,7 +18,7 @@ class ResultPage extends React.Component {
                 (res) => {
 
                 }
-            )
+            ) */
     }
 
     render() {
