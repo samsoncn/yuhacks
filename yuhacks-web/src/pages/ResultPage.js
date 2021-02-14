@@ -1,8 +1,21 @@
 import React from 'react';
 import QACard from "../components/QACard";
 import MCCard from "../components/MCCard"
+import axios from "axios";
 
 class ResultPage extends React.Component {
+    componentDidMount() {
+        axios.post('/api/orders/late', {}, {
+            headers: {
+                'Authorization': `token ${localStorage.getItem('token')}`
+            }})
+            .then(
+                (res) => {
+
+                }
+            )
+    }
+
     render() {
         return (
             <>
