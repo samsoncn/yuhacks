@@ -24,9 +24,9 @@ function useStorage(file) {
         // get the url of the image
         // asynchronous
         const url = await storageReference.getDownloadURL();
+        setUrl(url);
         const createdAt = timestamp();
         await collectionRef.add({ url, createdAt });
-        setUrl(url);
     })
 
     }, [file]);
