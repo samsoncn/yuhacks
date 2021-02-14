@@ -25,9 +25,7 @@ class App extends Component {
               <UploadPage />
             </Route>
 
-            <Route path="/results" exact>
-              <ResultPage />
-            </Route>
+            <Route path="/results/:link" exact component={ResultPage}/>
 
           </Switch>
         </BrowserRouter>

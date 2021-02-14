@@ -1,17 +1,17 @@
-import React, { useEffect } from 'react';
+import React, {useCallback, useEffect} from 'react';
 import useStorage from './hooks/useStorage';
 import { motion } from 'framer-motion';
 import './Upload.css';
 
-function ProgressBar ({ urlCallback, file, setFile }) {
+function ProgressBar ({ setUrl, file, setFile }) {
   const { url, progress } = useStorage(file);
 
   useEffect(() => {
     if (url) {
       setFile(null);
-      urlCallback(url);
+      setUrl(url);
     }
-  }, [url, setFile]);
+  }, [url, setFile, setUrl ]);
 
   return (
 
