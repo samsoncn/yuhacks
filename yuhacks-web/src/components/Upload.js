@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import ProgressBar from './ProgressBar';
 import './Upload.css';
+import useStorage from "./hooks/useStorage";
 
 function Upload() {
 
     const [file, setFile] = useState(null);
+    const [url, setUrl] = useState(null);
     const [error, setError] = useState(null);
     const types = ['video/mp4'];
 
@@ -21,12 +23,18 @@ function Upload() {
         }
 
     };
+
+    const urlCallback = (url) => {
+        console.log(url)
+        setUrl(url)
+    }
+
     return (
         <>
         <form>
             <div className='display'>
 
-                { file && <ProgressBar file={file} setFile={setFile} /> }
+                { file && <ProgressBar url={urlCallback} file={file} setFile={setFile} /> }
                 { error && <div className='error'>{ error }</div> }
                 { file && <div>{ file.name } </div >}
 
@@ -40,6 +48,11 @@ function Upload() {
             </label>
        
         </form>
+            {url &&
+                <div>
+
+                </div>
+            }
         </>
 
     )

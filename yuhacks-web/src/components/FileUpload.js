@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useState } from 'react';
 import axios from 'axios';
 
 // import FileUpload from 'FileUpload';
@@ -51,11 +51,11 @@ function FileUpload() {
             setTimeout(() => setUploadPercentage(0), 10000);
           }
         });
-  
+
         const { fileName, filePath } = res.data;
   
         setUploadedFile({ fileName, filePath });
-  
+
         setMessage('File Uploaded');
       } catch (err) {
         if (err.response.status === 500) {
