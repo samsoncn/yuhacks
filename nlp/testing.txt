@@ -1,0 +1,18 @@
+Who says that a source code cannot be poetic? Why not making code poems out of the instructions, classes, functions, syntaxes, and semantics within the programming languages?
+
+
+Although made for communication with computers, it does not mean that Java, Python, SQL, Ruby, CSS or HTML should not be used for poetic word flow and rhymes, too. That is exactly what some web developers have created along the way, while delving into the world of dots, slashes, brackets, numbers, structures, and algorithms.
+
+The anthology called code {poems}, for example, makes a specific selection of 55 poems written by web developers around the world. It was published in 2012, and edited by David Gauthier, Jamie Allen, Joshua Noble, and Marcin Ignac. The author of the whole project is Ishac Bertran, and, as the official description says it, the code can speak literature, logic, math, and this code is meant to be read, not run.
+
+The project named ./code –poetry is another example of a book created as a unique collection of poems written in various programming languages’ source code. Authors are Daniel Holden and Chris Kerr. Each and every poem inside this book is a valid program that produces visual artwork when compiled, and the entire book is formatted and designed to look like a piece of visual art.
+
+For everyone out there who wants to give it a try themselves, or simply learn more about the subject matter, there is the Source Code Poetry Conference happening every year, as well as the Source Code Poetry Challenge. The rules of the challenge are simple – poems must compile, must rhyme, and must be cool. You can find all other information about the conference, and the competition rules, jury members, and the prizes on the Source Code Poetry website.
+
+Web developers can surely relate to their fellow coders and their way of thinking, but not only the programming masters can enjoy the aesthetics of code. Everyone else, who just happen to love visual art, poetry, wordplay, and everything language-related, can also find the source code poems truly empowering, inspirational, and enjoyable.
+
+Code poetry can be processed by machines and by humans.
+
+Here, we present you examples of human poetic creations made with programming languages.
+
+Enjoy!
