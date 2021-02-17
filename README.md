@@ -1,4 +1,4 @@
-# yuhacks
+# LectureExpert
  Flask server instructions:
  <br/>
  source venv/Scripts/activate
